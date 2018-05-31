@@ -1,0 +1,203 @@
+$date
+	Thu Mar 22 17:07:57 2018
+$end
+
+$version
+	Synopsys VCS version L-2016.06_Full64
+$end
+
+$timescale
+	10ps
+$end
+
+$comment Csum: 1 8a4ae64ba3e67b33 $end
+
+
+$scope module stimulus $end
+$var reg 1 ! InData $end
+$var reg 1 " bCS $end
+$var reg 1 # bWE $end
+$var wire 1 $ OutData $end
+
+$scope module SRAMCELL_01 $end
+$var wire 1 % InData $end
+$var wire 1 & bCS $end
+$var wire 1 ' bWE $end
+$var tri 1 $ OutData $end
+$var wire 1 ( latch $end
+$var wire 1 ) N5 $end
+$var wire 1 * n2 $end
+$var wire 1 + n3 $end
+$var wire 1 , n4 $end
+
+$scope module latch_reg $end
+$var wire 1 ) CLK $end
+$var wire 1 % D $end
+$var wire 1 ( Q $end
+$var reg 1 - NOTIFIER $end
+$var wire 1 . DS0000 $end
+$var wire 1 / P0000 $end
+$upscope $end
+
+
+$scope module OutData_tri $end
+$var wire 1 * A $end
+$var wire 1 + EN $end
+$var wire 1 $ Y $end
+$var wire 1 0 I0_out $end
+$upscope $end
+
+
+$scope module U6 $end
+$var wire 1 & A $end
+$var wire 1 , B $end
+$var wire 1 + Y $end
+$var wire 1 1 I0_out $end
+$upscope $end
+
+
+$scope module U7 $end
+$var wire 1 ' A $end
+$var wire 1 , Y $end
+$upscope $end
+
+
+$scope module U8 $end
+$var wire 1 ( A $end
+$var wire 1 * Y $end
+$upscope $end
+
+
+$scope module U9 $end
+$var wire 1 ' A $end
+$var wire 1 & B $end
+$var wire 1 ) Y $end
+$var wire 1 2 I0_out $end
+$upscope $end
+
+$upscope $end
+
+$upscope $end
+
+$enddefinitions $end
+
+#0
+$dumpvars
+x!
+1"
+1#
+x.
+x-
+x/
+x0
+11
+12
+x%
+x$
+1&
+1'
+x)
+x(
+x*
+x+
+x,
+$end
+#3
+0,
+#4
+0)
+0+
+#10
+z$
+#500
+1!
+1%
+#1000
+0"
+0&
+01
+0#
+0'
+02
+#1004
+1)
+1,
+11
+1.
+0/
+#1023
+1(
+#1026
+0*
+10
+#1500
+1"
+1&
+12
+#1504
+0)
+#2000
+0"
+0&
+02
+1#
+1'
+12
+#2003
+0,
+01
+#2007
+1+
+#2013
+1$
+#2500
+0!
+0%
+#3000
+0#
+0'
+02
+#3004
+1,
+11
+#3005
+1)
+0.
+1/
+#3008
+0+
+#3014
+z$
+#3030
+0(
+#3034
+1*
+00
+#3500
+1"
+1&
+12
+#3504
+0)
+#4000
+0"
+0&
+02
+1#
+1'
+12
+#4003
+0,
+01
+#4007
+1+
+#4009
+0$
+#4500
+1"
+1&
+11
+#4505
+0+
+#4509
+z$

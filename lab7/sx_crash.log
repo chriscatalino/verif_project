@@ -1,0 +1,197 @@
+### CustomExplorer log file, revision E-2011.03-1 (build 1103) ###
+### created at 11:28:16 on Thu Mar 22 2018 (Linux AMD64) ###
+wv_start_log
+# (0) running in waveview only mode
+# (0) HOME defined
+wv_move_window CustomWaveView 0 0
+wv_resize_window CustomWaveView 800 400
+wv_move_window CustomWaveView 0 33
+wv_resize_window CustomWaveView 1680 951
+wv_resize_window CustomWaveView 800 400
+sx_open_sim_file_read {wave.dump}
+wv_resize_window CustomWaveView 1680 951
+wv_resize_window CustomWaveView 800 400
+wv_resize_window CustomWaveView 1680 951
+wv_select_hierview_item {FILE0:D0:wave.dump}
+wv_expand_hierview_item {FILE0:D0:wave.dump}
+wv_expand_hierview_item {FILE0:D0:wave.dump} {stimulus}
+wv_select_hierview_item {FILE0:D0:wave.dump} {stimulus/SRAMCELL_01}
+wv_select_hierview_item {FILE0:D0:wave.dump} {stimulus}
+wv_ctrl_select_sigview_item InData
+wv_ctrl_select_sigview_item OutData
+wv_drag_sigview_item OutData
+wv_ctrl_select_sigview_item OutData
+wv_ctrl_select_sigview_item OutData
+wv_drag_sigview_item OutData
+wv_ctrl_select_sigview_item bCS
+wv_ctrl_select_sigview_item bWE
+wv_drag_sigview_item OutData
+wv_drag_enter WV1
+wv_drop_on WV1
+wv_select_hierview_item {FILE0:D0:wave.dump} {stimulus/SRAMCELL_01}
+wv_select_sigview_item DLatch
+wv_ctrl_select_sigview_item InData
+wv_drag_sigview_item InData
+wv_ctrl_select_sigview_item OutData
+wv_ctrl_select_sigview_item bCS
+wv_ctrl_select_sigview_item bWE
+wv_drag_sigview_item OutData
+wv_drag_enter WV1
+wv_drag_to WV1 0 351
+wv_drop_on WV1
+wv_select_panel WV1.PANEL6:1 3.57664e-09 -inf
+wv_select_wv_item {WV1.ICON.add cursor}
+wv_release_wv_item WV1 77 12
+wv_select_panel WV1.PANEL5:1 2.49361e-09 -inf
+wv_move_wv_item WV1.PANEL5:1.CURSOR1 252 165
+wv_select_wv_item WV1.PANEL6:1.CURSOR1
+wv_drag_item_to WV1 248 172
+wv_move_wv_item WV1.PANEL6:1.CURSOR1 237 253
+wv_select_wv_item WV1.PANEL9:1.LEGEND
+wv_drag_item_to WV1 66 249
+wv_drag_enter WV1
+wv_drag_to WV1 72 250
+wv_drop_on WV1
+wv_drag_item_to WV1 72 250
+wv_release_wv_item WV1 88 298
+wv_release_wv_item WV1 164 325
+wv_release_wv_item WV1 143 293
+wv_select_wv_item WV1.PANEL9:1.CURSOR1
+wv_drag_item_to WV1 234 251
+wv_move_wv_item WV1.PANEL9:1.CURSOR1 269 251
+wv_select_wv_item WV1.PANEL4:1.LEGEND
+wv_drag_item_to WV1 71 127
+wv_drag_enter WV1
+wv_drag_to WV1 77 128
+wv_drag_to WV1 81 129
+wv_drop_on WV1
+wv_drag_item_to WV1 77 128
+wv_select_panel WV1.PANEL6:1 5.29412e-09 inf
+wv_move_wv_item WV1.PANEL6:1.CURSOR1 325 179
+wv_select_wv_item {WV1.ICON.add cursor}
+wv_release_wv_item WV1 79 12
+wv_select_panel WV1.PANEL7:1 2.9156e-09 inf
+wv_move_wv_item WV1.PANEL7:1.CURSOR2 263 205
+wv_select_panel WV1.PANEL1:1 3.18414e-09 -inf
+wv_move_wv_item WV1.PANEL1:1.CURSOR2 270 280
+wv_select_wv_item WV1.PANEL2:1.CURSOR2
+wv_drag_item_to WV1 267 71
+wv_move_wv_item WV1.PANEL2:1.CURSOR2 240 94
+wv_select_wv_item WV1.LEGEND.WIDTH
+wv_drag_item_to WV1 79 128
+wv_move_wv_item WV1.PANEL1:1.LEGEND.WIDTH 173
+wv_select_wv_item {WV1.ICON.add cursor}
+wv_release_wv_item WV1 76 13
+wv_select_wv_item WV1.PANEL5:1.CURSOR3
+wv_drag_item_to WV1 774 149
+wv_move_wv_item WV1.PANEL5:1.CURSOR3 774 153
+wv_press_key Delete
+#please select panel(s) for the delete action
+## TYPE S abort
+## memory usage 5.32MB
+#session saved in: 'sx_crash.sx'
+### auto-generated spxrc ###
+### General Settings ###
+gui_font small
+startup_mode full
+show_console false
+replay_delay 1
+backingstore internal
+gui_color bright
+sx_editor vi
+private_colormap false
+wv_iconizable false
+user_colors false
+thick_line false
+okbtn_autocenter false
+delete_confirm true
+reload_confirm true
+precision_digits 3
+browser_width 250
+### SPICE lint ###
+spice_netlist_erc off
+spice_inst_casesensitive false
+spice_parm_casesensitive false
+spice_sort_subckt_cells false
+spice_cell_index_depth true
+spice_smart_sort false
+use_hspiceini false
+lint_suppress_list 
+lint_min_resistance    1.000E-05
+lint_max_capacitance    1.000E-03
+lint_min_mos_width    1.000E-08
+lint_max_mos_width    1.000E-02
+lint_min_mos_length    1.000E-08
+lint_max_mos_length    1.000E-02
+### Custom WaveView ###
+waveview_background black
+cycle_color_by panel+waveview
+clamp_ac_phase true
+left_button_action zoom
+init_xy_mode hvsel
+group_display_order file
+def_ac_stack complex
+def_acx_type linear
+def_acy_type linear
+def_trx_type linear
+def_try_type linear
+def_fft_xscale log
+def_fft_yscale db
+signal_dnd_mode move
+logic_style_default vcd
+signal_font normal
+signal_name name+file
+signal_path path+name
+load_data_at_open false
+grid_default on
+grid_brightness normal
+auto_y_axes off
+alias_bracket true
+flatten_single_point_sweep true
+signame_popup false
+show_ytype false
+smart_hsort false
+sweep_expand user
+remove_dupsig false
+case_sens_tr0 false
+flatten_segs true
+extend_waveform false
+convert_s_to_yz true
+sync_alias true
+real_time_scroll true
+snap_marker false
+btn_add_hcursor false
+bar_grip_scroll false
+auto_x_extend false
+hide_panel_div false
+logic_cursor_snap true
+logic_glitch_highlight true
+stack_auto_fit on
+wdf_filter allfiles
+horz_panel_height 80
+default_panels_perrow 4
+default_hist_binsize 10
+max_visible_panels 0
+lines_per_panel 0
+min_panel_height 20
+analog_panel_height 120
+max_log_span 12
+logic_panel_height 24
+panel_spacing 0
+smith_char_impedance    5.000E+01
+d2a_xtol true
+d2a_fullext true
+d2a_high_value    3.300E+00
+d2a_low_value    0.000E+00
+d2a_rise_slew    1.000E-11
+d2a_fall_slew    1.000E-11
+a2d_single_threshold true
+a2d_center_threshold    2.500E+00
+a2d_high_threshold    4.000E+00
+a2d_low_threshold    1.000E+00
+dm_low_margin 10.0
+dm_high_margin 90.0
+dm_low_logic 0.0
+dm_high_logic 3.3
+SX_DM_DMScale false
+SNR_inc_floor_noise false

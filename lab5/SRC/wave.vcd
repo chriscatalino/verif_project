@@ -1,0 +1,31 @@
+$date
+     Mar 01, 2018       11:18:11
+$end
+
+$version
+              SystemC 2.2.0 --- Sep 15 2011 00:24:25
+$end
+
+$timescale
+     1 ps
+$end
+
+$scope module SystemC $end
+$var wire    1  aaa  rst_b       $end
+$upscope $end
+$enddefinitions  $end
+
+$comment
+All initial values are dumped below at time 0 sec = 0 timescale units.
+$end
+
+$dumpvars
+0aaa
+$end
+
+#3500
+1aaa
+
+#23671392500
+0aaa
+

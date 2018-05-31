@@ -1,0 +1,116 @@
+cd /home/grads/c/chandrahas996/ECEN468/lab3/SRC/
+gdb.shell.exe
+spawn /softwares/Linux/mentor/vista312/linux64/tools.64bit/bin/gdb -quiet -interp=opengdb -runtcl="/softwares/Linux/mentor/vista312/generic/tcl/v2/gdb/gdb.tcl" --nx
+
+(vista) BFD: /usr/lib64/libm.so.6: invalid relocation type 37
+BFD: BFD 2.17.50 20061115 assertion fail elf64-x86-64.c:259
+BFD: /usr/lib64/libm.so.6: invalid relocation type 37
+BFD: BFD 2.17.50 20061115 assertion fail elf64-x86-64.c:259
+BFD: /usr/lib64/libm.so.6: invalid relocation type 37
+BFD: BFD 2.17.50 20061115 assertion fail elf64-x86-64.c:259
+BFD: /usr/lib64/libm.so.6: invalid relocation type 37
+BFD: BFD 2.17.50 20061115 assertion fail elf64-x86-64.c:259
+BFD: /usr/lib64/libm.so.6: invalid relocation type 37
+BFD: BFD 2.17.50 20061115 assertion fail elf64-x86-64.c:259
+BFD: /usr/lib64/libm.so.6: invalid relocation type 37
+BFD: BFD 2.17.50 20061115 assertion fail elf64-x86-64.c:259
+BFD: /usr/lib64/libm.so.6: invalid relocation type 37
+BFD: BFD 2.17.50 20061115 assertion fail elf64-x86-64.c:259
+BFD: /usr/lib64/libm.so.6: invalid relocation type 37
+BFD: BFD 2.17.50 20061115 assertion fail elf64-x86-64.c:259
+BFD: /usr/lib64/libm.so.6: invalid relocation type 37
+BFD: BFD 2.17.50 20061115 assertion fail elf64-x86-64.c:259
+BFD: /usr/lib64/libm.so.6: invalid relocation type 37
+BFD: BFD 2.17.50 20061115 assertion fail elf64-x86-64.c:259
+BFD: /usr/lib64/libm.so.6: invalid relocation type 37
+BFD: BFD 2.17.50 20061115 assertion fail elf64-x86-64.c:259
+BFD: /usr/lib64/libm.so.6: invalid relocation type 37
+BFD: BFD 2.17.50 20061115 assertion fail elf64-x86-64.c:259
+BFD: /usr/lib64/libc.so.6: invalid relocation type 37
+BFD: BFD 2.17.50 20061115 assertion fail elf64-x86-64.c:259
+BFD: /usr/lib64/libc.so.6: invalid relocation type 37
+BFD: BFD 2.17.50 20061115 assertion fail elf64-x86-64.c:259
+BFD: /usr/lib64/libc.so.6: invalid relocation type 37
+BFD: BFD 2.17.50 20061115 assertion fail elf64-x86-64.c:259
+BFD: /usr/lib64/libc.so.6: invalid relocation type 37
+BFD: BFD 2.17.50 20061115 assertion fail elf64-x86-64.c:259
+BFD: /usr/lib64/libc.so.6: invalid relocation type 37
+BFD: BFD 2.17.50 20061115 assertion fail elf64-x86-64.c:259
+BFD: /usr/lib64/libc.so.6: invalid relocation type 37
+BFD: BFD 2.17.50 20061115 assertion fail elf64-x86-64.c:259
+BFD: /usr/lib64/libc.so.6: invalid relocation type 37
+BFD: BFD 2.17.50 20061115 assertion fail elf64-x86-64.c:259
+Vista SystemC 2.2 Runtime Kernel.
+Built September 15, 2011. License version 2011.9.
+Copyright (c) 2005-2011, Mentor Graphics Corporation.
+
+             SystemC 2.2.0 --- Sep 15 2011 00:24:25
+        Copyright (c) 1996-2006 by all Contributors
+                    ALL RIGHTS RESERVED
+
+Warning: (W506) illegal characters: UART_XMTR Simulation substituted by UART_XMTR_Simulation
+In file: /vista/Vista32x/64bit/v2/Vista312release/src/tlm2.0.1/../CPP/systemc22/sysc/impl/kernel/sc_object.cpp:267
+
+Warning: (W506) illegal characters: UART_XMTR_WRAP Simulation substituted by UART_XMTR_WRAP_Simulation
+In file: /vista/Vista32x/64bit/v2/Vista312release/src/tlm2.0.1/../CPP/systemc22/sysc/impl/kernel/sc_object.cpp:267
+
+Warning: (W506) illegal characters: SRAM Simulation substituted by SRAM_Simulation
+In file: /vista/Vista32x/64bit/v2/Vista312release/src/tlm2.0.1/../CPP/systemc22/sysc/impl/kernel/sc_object.cpp:267
+
+Warning: (W506) illegal characters: SRAM Simulation substituted by SRAM_Simulation
+In file: /vista/Vista32x/64bit/v2/Vista312release/src/tlm2.0.1/../CPP/systemc22/sysc/impl/kernel/sc_object.cpp:267
+
+Warning: (W505) object already exists: SRAM_Simulation. Latter declaration will be renamed to SRAM_Simulation_0
+In file: /vista/Vista32x/64bit/v2/Vista312release/src/tlm2.0.1/../CPP/systemc22/sysc/impl/kernel/sc_object.cpp:191
+
+Warning: (W506) illegal characters: Arbiter Simulation substituted by Arbiter_Simulation
+In file: /vista/Vista32x/64bit/v2/Vista312release/src/tlm2.0.1/../CPP/systemc22/sysc/impl/kernel/sc_object.cpp:267
+
+Warning: (W506) illegal characters: Test Module Instantiation substituted by Test_Module_Instantiation
+In file: /vista/Vista32x/64bit/v2/Vista312release/src/tlm2.0.1/../CPP/systemc22/sysc/impl/kernel/sc_object.cpp:267
+Merging /home/grads/c/chandrahas996/ECEN468/lab3/SRC/systembus/build/home/grads/c/chandrahas996/ECEN468/lab3/SRC/main.exe ...Done.
+Saving types data file /home/grads/c/chandrahas996/ECEN468/lab3/SRC/systembus/sim/main.db...Done.
+Write Operation on SRAM: Address=262143,Data=255,Data in SRAM =255
+WARNING: Default time step is used for VCD tracing.
+
+@1500 ps:: >>>>>>>>>>>> Start Simulation
+
+@33500 ps:: >>  Write data to SRAM: 0x30
+Write Operation on SRAM: Address=234,Data=30,Data in SRAM =030
+
+@55500 ps:: >>  Set SRAM to read mode
+Read Operation on SRAM: Address=234,Data in SRAM =030
+Read Operation on SRAM: Address=234,Data in SRAM =030
+
+@71500 ps:: >>  Read data from data bus: 0x030
+@ 97 ns INFO: The Data read from the Data Bus is 30
+@ 98 ns INFO: The Data read from the Data Bus is 30
+@ 99 ns INFO: The Data from the Data Register has been loaded to shift register
+@ 104 ns INFO:Bit Count has changed to 01
+@ 104 ns INFO:The Bit to be serially sent is 0
+@ 105 ns INFO:Bit Count has changed to 02
+@ 105 ns INFO:The Bit to be serially sent is 0
+@ 106 ns INFO:Bit Count has changed to 03
+@ 106 ns INFO:The Bit to be serially sent is 0
+@ 107 ns INFO:Bit Count has changed to 04
+@ 107 ns INFO:The Bit to be serially sent is 0
+@ 108 ns INFO:Bit Count has changed to 05
+@ 108 ns INFO:The Bit to be serially sent is 0
+@ 109 ns INFO:Bit Count has changed to 06
+@ 109 ns INFO:The Bit to be serially sent is 1
+@ 110 ns INFO:Bit Count has changed to 07
+@ 110 ns INFO:The Bit to be serially sent is 1
+@ 111 ns INFO:Bit Count has changed to 08
+@ 111 ns INFO:The Bit to be serially sent is 0
+@ 112 ns INFO:Bit Count has changed to 09
+@ 112 ns INFO:The Bit to be serially sent is 0
+
+@123500 ps:: >>>>>>>>>>>> End Simulation
+
+@123500 ps:: >>>>>>>>>>>> Start Simulation
+SystemC: simulation stopped by user.
+Program is about to exit.
+#0  0x0000000000502850 in summit_sc::Runtime::atExitCallback ()
+(vista) 
+
+(vista) 

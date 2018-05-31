@@ -1,0 +1,36 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "stimulus": {
+            "Compiled": "Yes",
+            "Compiled Times": 50
+        }
+    },
+    "CompUnits": {
+        "mFBx0_d": {
+            "mod": "stimulus",
+            "out": "mFBx0_d.o",
+            "bytes": 215776,
+            "mode": 4,
+            "checksum": 0,
+            "archive": "archive.49/_16881_archive_1.a"
+        }
+    },
+    "reusePaths": {
+        "amcQw_d": {
+            "icPath": "csrc"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.49/_16881_archive_1.a",
+            "objects": [
+                [
+                    "mFBx0_d.o",
+                    215776
+                ]
+            ],
+            "size": 215776
+        }
+    ]
+}

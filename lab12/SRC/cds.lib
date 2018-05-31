@@ -1,0 +1,2 @@
+INCLUDE /softwares/Linux/cadence/IC615/share/cdssetup/cds.lib
+DEFINE PLL /home/grads/c/chandrahas996/ECEN468/lab12/SRC/PLL

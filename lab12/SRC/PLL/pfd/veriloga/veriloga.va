@@ -1,0 +1,27 @@
+`include "constants.vams"
+`include "disciplines.vams"
+
+// Phase Frequency Detector
+module pfd(out, ref, fb);
+	output out; electrical out;
+	input ref; voltage ref;
+	input fb; voltage fb;
+	parameter real iout=100u; // current output
+	parameter real vth= 0;
+	parameter integer dir=1 from [-1:1] exclude 0; // dir=1 for positive edge trigger // dir=-1 for negative edge trigger	
+	parameter real tt=1n from (0:inf);
+	parameter real td=0 from [0:inf);
+	integer state;
+	
+	analog 
+	begin
+		// Implement phase detector
+		@(cross(V(ref)-vth, dir))
+			if (state > -1) state = state - 1;
+		@(cross(V(fb)-vth, dir))
+			if (state < 1) state = state + 1;
+		// Implement charge pump
+		I(out) <+ transition(iout*state, td, tt);
+	end
+endmodule
+

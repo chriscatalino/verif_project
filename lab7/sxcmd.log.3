@@ -1,0 +1,43 @@
+### CustomExplorer log file, revision E-2011.03-1 (build 1103) ###
+### created at 15:17:01 on Thu Mar 22 2018 (Linux AMD64) ###
+wv_start_log
+# (0) running in waveview only mode
+# (0) HOME defined
+wv_move_window CustomWaveView 0 0
+wv_resize_window CustomWaveView 800 400
+wv_move_window CustomWaveView 0 33
+wv_resize_window CustomWaveView 1680 951
+sx_open_sim_file_read {wave.dump}
+wv_resize_window CustomWaveView 800 400
+wv_resize_window CustomWaveView 1680 951
+wv_move_window CustomWaveView -10 20
+wv_expand_hierview_item {FILE0:D0:wave.dump}
+wv_select_hierview_item {FILE0:D0:wave.dump} {stimulus}
+wv_ctrl_select_sigview_item InData
+wv_ctrl_select_sigview_item OutData
+wv_ctrl_select_sigview_item bCS
+wv_ctrl_select_sigview_item bCS
+wv_ctrl_select_sigview_item bCS
+wv_drag_sigview_item bCS
+wv_ctrl_select_sigview_item bWE
+wv_sigview_context_menu OutData
+wv_drag_sigview_item bWE
+wv_drag_enter WV1
+wv_drop_on WV1
+wv_select_menu_item {WaveView} {Dump Screen}
+wv_move_dialog SaveScreenDump 622 413
+wv_select_dialog SaveScreenDump
+wv_set_text SaveScreenDump.SaveToFile {lab7_1}
+wv_press_button SaveScreenDump.SaveToFileBrowse
+wv_select_dialog FileDialog
+wv_set_text SaveScreenDump.SaveToFile {lab7_1}
+wv_set_text FileDialog.FileName {}
+wv_close_dialog FileDialog
+wv_select_dialog SaveScreenDump
+wv_set_text SaveScreenDump.SaveToFile {lab7_1}
+wv_press_button SaveScreenDump.Save
+#screen dump generated
+wv_close_window CustomWaveView
+wv_move_dialog Confirmation 743 454
+wv_select_dialog Confirmation
+# wv_press_button Confirmation.Ok

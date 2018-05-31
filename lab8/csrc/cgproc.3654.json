@@ -1,0 +1,39 @@
+{
+    "ObjArchives": [
+        {
+            "objects": [
+                [
+                    "mFBx0_d.o",
+                    23724
+                ]
+            ],
+            "archive": "archive.19/_3654_archive_1.a",
+            "size": 23724
+        }
+    ],
+    "Modules": {
+        "stimulus": {
+            "Compiled": "Yes",
+            "Compiled Times": 20
+        },
+        "...MASTER...": {}
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "checksum": 0,
+            "mod": "...MASTER...",
+            "out": "objs/amcQw_d.o",
+            "bytes": 7205,
+            "mode": 4
+        },
+        "mFBx0_d": {
+            "checksum": 0,
+            "mod": "stimulus",
+            "out": "mFBx0_d.o",
+            "bytes": 23724,
+            "mode": 4,
+            "archive": "archive.19/_3654_archive_1.a"
+        }
+    },
+    "reusePaths": {}
+}

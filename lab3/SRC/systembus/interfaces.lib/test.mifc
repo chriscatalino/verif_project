@@ -1,0 +1,13 @@
+# === Model Interface File ===
+# ============================
+
+class test
+include ../../test.h
+port -name clk -kind sc_in -class sc_in<bool> -signal_data_type bool
+port -name bReset -kind sc_out -class sc_out<bool> -signal_data_type bool
+port -name Serial_out -kind sc_in -class sc_in<bool> -signal_data_type bool
+port -name Breq -kind sc_out -class sc_out<bool> -signal_data_type bool
+port -name Bgnt -kind sc_in -class sc_in<bool> -signal_data_type bool
+port -name DataBus -kind sc_inout -class sc_inout_rv<8> -signal_data_type {sc_dt::sc_lv<8> }
+port -name AddressBus -kind sc_inout -class sc_inout_rv<32> -signal_data_type {sc_dt::sc_lv<32> }
+port -name ControlBus -kind sc_inout -class sc_inout_rv<1> -signal_data_type {sc_dt::sc_lv<1> }

@@ -1,0 +1,17 @@
+# === Model Interface File ===
+# ============================
+
+class test
+include ../../test.h
+port -name AddrRegRow -kind sc_out -class sc_out<sc_dt::sc_uint<3>> -signal_data_type {sc_dt::sc_uint<3> }
+port -name AddrRegCol -kind sc_out -class sc_out<sc_dt::sc_uint<3>> -signal_data_type {sc_dt::sc_uint<3> }
+port -name bWE -kind sc_out -class sc_out<bool> -signal_data_type bool
+port -name bCE -kind sc_out -class sc_out<bool> -signal_data_type bool
+port -name InData -kind sc_out -class sc_out<sc_dt::sc_uint<8>> -signal_data_type {sc_dt::sc_uint<8> }
+port -name OutData -kind sc_in -class sc_in<sc_dt::sc_uint<8>> -signal_data_type {sc_dt::sc_uint<8> }
+port -name OPMode -kind sc_out -class sc_out<sc_dt::sc_uint<3>> -signal_data_type {sc_dt::sc_uint<3> }
+port -name bOPEnable -kind sc_out -class sc_out<bool> -signal_data_type bool
+port -name dReadReg -kind sc_out -class sc_out<sc_dt::sc_uint<4>> -signal_data_type {sc_dt::sc_uint<4> }
+port -name dWriteReg -kind sc_out -class sc_out<sc_dt::sc_uint<4>> -signal_data_type {sc_dt::sc_uint<4> }
+port -name clk -kind sc_in -class sc_in<bool> -signal_data_type bool
+port -name rst_b -kind sc_out -class sc_out<bool> -signal_data_type bool

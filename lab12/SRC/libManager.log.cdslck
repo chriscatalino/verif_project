@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      chandrahas996
+HostName                       lin01-324cvlb.ece.tamu.edu
+ProcessIdentifier              13380
+ProcessCreationTime_UTC        1524792366
+ProcessCreationTime_Readable   Thu Apr 26 20:26:06 2018 CDT
+AppIdentifier                  /softwares/Linux/cadence/IC615/tools/dfII/bin/64bit/libManager
+OSType                         lnx86
+ReasonForPlacingEditLock       log file
+FilePathUsedToEditLock         /home/grads/c/chandrahas996/ECEN468/lab12/SRC/libManager.log
+TimeEditLocked                 Thu Apr 26 20:26:18 2018 CDT

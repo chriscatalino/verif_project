@@ -1,0 +1,88 @@
+0 
+22
++v2k
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/softwares/Common/synopsys/vcs-mx_vL-2016.06/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -rdynamic
+-Mobjects= /softwares/Common/synopsys/vcs-mx_vL-2016.06/linux64/lib/libvirsim.so /softwares/Common/synopsys/vcs-mx_vL-2016.06/linux64/lib/liberrorinf.so /softwares/Common/synopsys/vcs-mx_vL-2016.06/linux64/lib/libsnpsmalloc.so
+-Mout=simv
+-Msaverestoreobj=/softwares/Common/synopsys/vcs-mx_vL-2016.06/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=-ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/softwares/Common/synopsys/vcs-mx_vL-2016.06/include
+-full64
+-gen_obj
+-picarchive
+/softwares/Common/synopsys/vcs-mx_vL-2016.06/linux64/bin/vcs1
+tb_comp.v
+54
+sysc_uni_pwd=/home/grads/c/chandrahas996/ECEN468/lab10/src
+XDG_SESSION_ID=c27944
+XDG_RUNTIME_DIR=/run/user/526004809
+XDG_DATA_DIRS=/home/grads/c/chandrahas996/.local/share/flatpak/exports/share/:/var/lib/flatpak/exports/share/:/usr/local/share/:/usr/share/
+VMR_MODE_FLAG=64
+VERA_HOME=/softwares/Common/synopsys/Vera_vD-2009.12-3/vera_vD-2009.12-3_amd64
+VENDOR=unknown
+VCS_MX_HOME_INTERNAL=1
+VCS_MODE_FLAG=64
+VCS_HOME=/softwares/Common/synopsys/vcs-mx_vL-2016.06
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH_OVERRIDE=linux
+VCS_ARCH=linux64
+USER_PRINCIPAL_NAME=chandrahas996@AUTH.TAMU.EDU
+UNAME=/bin/uname
+TOOL_HOME=/softwares/Common/synopsys/vcs-mx_vL-2016.06/linux64
+SYS_BASE=/softwares/Common/synopsys
+STROOT=/softwares/Common/synopsys/sentaurus_vL_2016.03-SP2
+SSH_TTY=/dev/pts/29
+SSH_CONNECTION=172.16.49.213 46578 165.91.159.17 22
+SSH_CLIENT=172.16.49.213 46578 22
+SNPS_SIMIF=/softwares/Common/synopsys/hspice_vL-2016-1
+SELINUX_USE_CURRENT_RANGE=
+SELINUX_ROLE_REQUESTED=
+SELINUX_LEVEL_REQUESTED=
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+REMOTEHOST=172.16.49.213
+OVA_UUM=0
+OSTYPE=linux
+MODULESHOME=/usr/share/Modules
+MODULEPATH=/usr/share/Modules/modulefiles:/etc/modulefiles
+MG_HOME=/softwares/Common/synopsys/Magellan_vD-2010.03
+LOADEDMODULES=
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LEDA_PATH=/softwares/Common/synopsys/Leda_vD-2010.03
+LC_ALL=C
+KRB5CCNAME=FILE:/tmp/krb5cc_526004809
+INNOVATOR_CENTRAL=1
+HOSTTYPE=x86_64-linux
+HISTFILESIZE=10000
+HISTCONTROL=ignoredups
+GROUP=chandrahas996
+DA_SESSION_ID_AUTH=ee96bc1d-a8fc-fc4e-8953-f361fa7e7007
+CDC_PREW2KHOST=apollo3
+CDC_LOCALHOST=apollo3.engr.tamu.edu
+CDC_JOINED_ZONE=CN=Servers,CN=Override,CN=ECEN,CN=Depts,CN=Global,CN=Zones,OU=Centrify,OU=Services,DC=engr,DC=tamu,DC=edu
+CDC_JOINED_SITE=Default-First-Site-Name
+CDC_JOINED_DOMAIN=engr.tamu.edu
+CDC_JOINED_DC=ops3.engr.tamu.edu
+BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`_}
+ARCHPRO_ROOT=/softwares/Common/synopsys/MVtools_vD-2010.06
+ARCH=x86_64
+0
+1
+1358288009 tb_comp.v
+4
+0 
+1464147802 /softwares/Common/synopsys/vcs-mx_vL-2016.06/linux64/lib/libvirsim.so
+1464147272 /softwares/Common/synopsys/vcs-mx_vL-2016.06/linux64/lib/liberrorinf.so
+1464147248 /softwares/Common/synopsys/vcs-mx_vL-2016.06/linux64/lib/libsnpsmalloc.so
+1524231364 simv.daidir

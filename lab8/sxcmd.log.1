@@ -1,0 +1,82 @@
+### CustomExplorer log file, revision E-2011.03-1 (build 1103) ###
+### created at 20:15:29 on Thu Mar 29 2018 (Linux AMD64) ###
+wv_start_log
+# (0) running in waveview only mode
+# (0) HOME defined
+wv_move_window CustomWaveView 0 0
+wv_resize_window CustomWaveView 800 400
+wv_move_window CustomWaveView 0 31
+wv_resize_window CustomWaveView 1680 951
+sx_open_sim_file_read {wave.dump}
+wv_resize_window CustomWaveView 800 400
+wv_resize_window CustomWaveView 1680 951
+wv_move_window CustomWaveView -10 20
+wv_expand_hierview_item {FILE0:D0:wave.dump}
+wv_expand_hierview_item {FILE0:D0:wave.dump} {stimulus}
+wv_select_hierview_item {FILE0:D0:wave.dump} {stimulus}
+wv_select_sigview_item Byte_ready
+wv_drag_sigview_item {Data_Bus[7:0]}
+wv_drag_enter WV1
+wv_drop_on WV1
+wv_select_menu_item {WaveView} {Dump Screen}
+wv_move_dialog SaveScreenDump 622 413
+wv_select_dialog SaveScreenDump
+wv_press_button SaveScreenDump.SaveToFileBrowse
+wv_select_dialog FileDialog
+wv_set_text FileDialog.FileName {}
+wv_close_dialog FileDialog
+wv_select_dialog SaveScreenDump
+wv_set_text SaveScreenDump.SaveToFile {1}
+wv_press_button SaveScreenDump.Save
+#screen dump generated
+wv_select_menu_item {File} {Import Waveform File ...}
+wv_move_dialog FileDialog 410 290
+wv_move_dialog FileDialog 628 162
+wv_select_dialog FileDialog
+wv_set_text FileDialog.FileName {}
+wv_vert_scroll FileDialog.FileList 0
+wv_vert_scroll FileDialog.FileList 0
+wv_vert_scroll FileDialog.FileList 0
+wv_vert_scroll FileDialog.FileList 0
+wv_horz_scroll FileDialog.FileList 158
+wv_select_list_item FileDialog.FileList wave_gate.dump
+wv_press_button FileDialog.Ok
+wv_expand_hierview_item {FILE1:D0:wave_gate.dump}
+wv_select_hierview_item {FILE1:D0:wave_gate.dump}
+wv_select_hierview_item {FILE1:D0:wave_gate.dump} {stimulus}
+wv_ctrl_select_sigview_item Byte_ready
+wv_ctrl_select_sigview_item rst_b
+wv_drag_sigview_item Serial_out
+wv_drag_enter WV1
+wv_drag_to WV1 28 520
+wv_drop_on WV1
+wv_select_menu_item {File} {Update Waveform Files}
+wv_move_dialog ReloadFiles 595 446
+wv_select_dialog ReloadFiles
+wv_press_button ReloadFiles.YesAll
+wv_select_wv_item WV1.PANEL15:1.LEGEND
+wv_drag_item_to WV1 73 394
+wv_drag_enter WV1
+wv_drag_to WV1 80 397
+wv_drag_to WV1 147 417
+wv_drop_on WV1
+wv_drag_item_to WV1 80 397
+wv_select_wv_item WV1.LEGEND.WIDTH
+wv_drag_item_to WV1 80 507
+wv_move_wv_item WV1.PANEL1:1.LEGEND.WIDTH 294
+wv_select_menu_item {WaveView} {Dump Screen}
+wv_move_dialog SaveScreenDump 622 413
+wv_select_dialog SaveScreenDump
+wv_set_text SaveScreenDump.SaveToFile {3.png}
+wv_press_button SaveScreenDump.Save
+#screen dump generated
+wv_close_window CustomWaveView
+wv_close_window CustomWaveView
+wv_close_window CustomWaveView
+wv_close_window CustomWaveView
+wv_move_dialog Confirmation 743 454
+wv_move_dialog Confirmation 743 454
+wv_move_dialog Confirmation 743 454
+wv_move_dialog Confirmation 743 454
+wv_select_dialog Confirmation
+# wv_press_button Confirmation.Ok

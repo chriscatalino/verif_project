@@ -1,0 +1,49 @@
+\o Program:		@(#)$CDS: libManager version 32.10 02/23/2011 11:55 (cat91amd) $
+\o Sub version:		sub-version  s001 
+\o Arguments:		-unmapped -mpssession virtuoso13284 -mpshost lin01-324cvlb.ece.tamu.edu 
+\o Working Directory:	lin01-324cvlb.ece.tamu.edu:/home/grads/c/chandrahas996/ECEN468/lab12/SRC
+\o 64-bit offsets
+\o Qt version: 		4.5.3
+\o changeWorkingDir("/home/grads/c/chandrahas996/ECEN468/lab12/SRC") unnecessary.
+\o ddSetForcedLib("") unnecessary.
+\o Log file is "/home/grads/c/chandrahas996/ECEN468/lab12/SRC/libManager.log".
+\o Opening libManager window.
+\a nrSetWindowVisibility(cdsLibManager "show")
+\o MPS service: map window
+\o Library Manager customization server connected.
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrResizeWindow(cdsLibManager list(380 178 1260 704))
+\a cdsLibManager->libListBox->value = "PLL"
+\a cdsLibManager->libLineEdit->value = "PLL"
+\a cdsLibManager->cellListBox->value = "pfd"
+\a cdsLibManager->cellListBox->value = "plltop"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellListBox->value = "fd"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellListBox->value = "plltop"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->cellLineEdit->value = "plltop"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\o MPS request: edit design
+\a nrListItemAction(cdsLibManager->gdmXTView 0 0)
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "PLL"
+\a cdsLibManager->libLineEdit->value = "PLL"
+\a cdsLibManager->cellListBox->value = "plltop"
+\a cdsLibManager->cellLineEdit->value = "plltop"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a nrSetCurrentWindow(cdsLibManager)

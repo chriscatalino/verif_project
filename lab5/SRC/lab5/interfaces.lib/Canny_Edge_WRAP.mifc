@@ -1,0 +1,22 @@
+# === Model Interface File ===
+# ============================
+
+class Canny_Edge_WRAP
+include ../../Canny_Edge_WRAP.h
+port -name AddrRegRow -kind sc_out -class sc_out<sc_dt::sc_uint<3>> -signal_data_type {sc_dt::sc_uint<3> }
+port -name AddrRegCol -kind sc_out -class sc_out<sc_dt::sc_uint<3>> -signal_data_type {sc_dt::sc_uint<3> }
+port -name bWE -kind sc_out -class sc_out<bool> -signal_data_type bool
+port -name bCE -kind sc_out -class sc_out<bool> -signal_data_type bool
+port -name InDataToCanny -kind sc_out -class sc_out<sc_dt::sc_uint<8>> -signal_data_type {sc_dt::sc_uint<8> }
+port -name OutDataFromCanny -kind sc_in -class sc_in<sc_dt::sc_uint<8>> -signal_data_type {sc_dt::sc_uint<8> }
+port -name OPMode -kind sc_out -class sc_out<sc_dt::sc_uint<3>> -signal_data_type {sc_dt::sc_uint<3> }
+port -name bOPEnable -kind sc_out -class sc_out<bool> -signal_data_type bool
+port -name dReadReg -kind sc_out -class sc_out<sc_dt::sc_uint<4>> -signal_data_type {sc_dt::sc_uint<4> }
+port -name dWriteReg -kind sc_out -class sc_out<sc_dt::sc_uint<4>> -signal_data_type {sc_dt::sc_uint<4> }
+port -name bReset -kind sc_in -class sc_in<bool> -signal_data_type bool
+port -name clk -kind sc_in -class sc_in<bool> -signal_data_type bool
+port -name Breq -kind sc_out -class sc_out<bool> -signal_data_type bool
+port -name Bgnt -kind sc_in -class sc_in<bool> -signal_data_type bool
+port -name DataBus -kind sc_inout -class sc_inout_rv<8> -signal_data_type {sc_dt::sc_lv<8> }
+port -name AddressBus -kind sc_inout -class sc_inout_rv<32> -signal_data_type {sc_dt::sc_lv<32> }
+port -name ControlBus -kind sc_inout -class sc_inout_rv<1> -signal_data_type {sc_dt::sc_lv<1> }

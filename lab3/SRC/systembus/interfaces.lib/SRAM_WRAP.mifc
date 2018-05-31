@@ -1,0 +1,17 @@
+# === Model Interface File ===
+# ============================
+
+class SRAM_WRAP
+include ../../SRAM_WRAP.h
+port -name bCE -kind sc_out -class sc_out<bool> -signal_data_type bool
+port -name bWE -kind sc_out -class sc_out<bool> -signal_data_type bool
+port -name Addr -kind sc_out -class sc_out_rv<18> -signal_data_type {sc_dt::sc_lv<18> }
+port -name InData -kind sc_out -class sc_out_rv<8> -signal_data_type {sc_dt::sc_lv<8> }
+port -name OutData -kind sc_in -class sc_in_rv<8> -signal_data_type {sc_dt::sc_lv<8> }
+port -name AddressBus -kind sc_inout -class sc_inout_rv<32> -signal_data_type {sc_dt::sc_lv<32> }
+port -name ControlBus -kind sc_inout -class sc_inout_rv<1> -signal_data_type {sc_dt::sc_lv<1> }
+port -name DataBus -kind sc_inout -class sc_inout_rv<8> -signal_data_type {sc_dt::sc_lv<8> }
+port -name Bgnt -kind sc_in -class sc_in<bool> -signal_data_type bool
+port -name Breq -kind sc_out -class sc_out<bool> -signal_data_type bool
+port -name bReset -kind sc_in -class sc_in<bool> -signal_data_type bool
+port -name clk -kind sc_in -class sc_in<bool> -signal_data_type bool

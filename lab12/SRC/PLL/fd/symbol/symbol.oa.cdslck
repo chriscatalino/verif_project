@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      chandrahas996
+HostName                       lin05-320cvlb.ece.tamu.edu
+ProcessIdentifier              26938
+ProcessCreationTime_UTC        1524776150
+ProcessCreationTime_Readable   Thu Apr 26 15:55:50 2018 CDT
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /home/grads/c/chandrahas996/ECEN468/lab12/SRC/PLL/fd/symbol/symbol.oa.cdslck
+TimeEditLocked                 Thu Apr 26 16:08:59 2018 CDT

@@ -1,0 +1,109 @@
+{
+    "Misc": {
+        "daidir": "simv.daidir",
+        "cwd": "/home/grads/c/chandrahas996/ECEN468/lab7",
+        "csrc": "csrc",
+        "csrc_abs": "/home/grads/c/chandrahas996/ECEN468/lab7/csrc",
+        "default_output_dir": "csrc",
+        "daidir_abs": "/home/grads/c/chandrahas996/ECEN468/lab7/simv.daidir",
+        "archive_dir": "archive.18"
+    },
+    "LVLData": [
+        "SIM"
+    ],
+    "MlibObjs": {},
+    "NameTable": {
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ],
+        "stimulus": [
+            "stimulus",
+            "mFBx0",
+            "module"
+        ]
+    },
+    "PrevCompiledModules": {
+        "stimulus": {
+            "mFBx0_d": {
+                "bytes": 19073,
+                "mod": "stimulus",
+                "mode": 4,
+                "out": "mFBx0_d.o",
+                "checksum": 0,
+                "archive": "archive.18/_25736_archive_1.a"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 7339,
+                "mod": "...MASTER...",
+                "mode": 4,
+                "out": "objs/amcQw_d.o",
+                "checksum": 0
+            }
+        }
+    },
+    "PEModules": [],
+    "CompileStrategy": "fullobj",
+    "stat": {
+        "ru_self_cgstart": {
+            "ru_minflt": 12938,
+            "ru_utime_sec": 0.026907,
+            "ru_stime_sec": 0.026907,
+            "ru_nivcsw": 37,
+            "ru_majflt": 0,
+            "ru_maxrss_kb": 52628,
+            "ru_nvcsw": 228
+        },
+        "ru_childs_cgstart": {
+            "ru_minflt": 0,
+            "ru_utime_sec": 0.0,
+            "ru_stime_sec": 0.0,
+            "ru_nivcsw": 0,
+            "ru_majflt": 0,
+            "ru_maxrss_kb": 0,
+            "ru_nvcsw": 0
+        },
+        "nMops": 270,
+        "nQuads": 184,
+        "outputSizePerQuad": 432.0,
+        "totalObjSize": 79667,
+        "ru_self_end": {
+            "ru_minflt": 15593,
+            "ru_utime_sec": 0.033190999999999998,
+            "ru_stime_sec": 0.035202999999999998,
+            "ru_nivcsw": 51,
+            "ru_majflt": 0,
+            "ru_maxrss_kb": 60412,
+            "ru_nvcsw": 325
+        },
+        "ru_childs_end": {
+            "ru_minflt": 601,
+            "ru_utime_sec": 0.000892,
+            "ru_stime_sec": 0.0017849999999999999,
+            "ru_nivcsw": 3,
+            "ru_majflt": 0,
+            "ru_maxrss_kb": 14576,
+            "ru_nvcsw": 5
+        },
+        "Frontend(%)": 81.06715675936249,
+        "CodeGen(%)": 18.932843240637517
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "...MASTER...",
+        "stimulus",
+        "stimulus"
+    ],
+    "CurCompileUdps": {},
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 58188
+    },
+    "CompileProcesses": [
+        "cgproc.25736.json"
+    ],
+    "CompileStatus": "Successful"
+}

@@ -1,0 +1,13 @@
+# === Model Interface File ===
+# ============================
+
+class Arbiter
+include ../../Arbiter.h
+port -name BREQ3 -kind sc_in -class sc_in<bool> -signal_data_type bool
+port -name BREQ2 -kind sc_in -class sc_in<bool> -signal_data_type bool
+port -name BREQ1 -kind sc_in -class sc_in<bool> -signal_data_type bool
+port -name BREQ0 -kind sc_in -class sc_in<bool> -signal_data_type bool
+port -name BGNT3 -kind sc_out -class sc_out<bool> -signal_data_type bool
+port -name BGNT2 -kind sc_out -class sc_out<bool> -signal_data_type bool
+port -name BGNT1 -kind sc_out -class sc_out<bool> -signal_data_type bool
+port -name BGNT0 -kind sc_out -class sc_out<bool> -signal_data_type bool
