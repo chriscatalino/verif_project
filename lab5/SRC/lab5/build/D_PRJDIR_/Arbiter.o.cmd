@@ -1,1 +1,0 @@
-"/softwares/Linux/mentor/vista312/bin/vista_cc" -I. -c -x c++ -Wall  -Wall -Wno-unknown-pragmas -Wno-switch -Wno-unused -MMD -I.    "/home/grads/c/chandrahas996/ECEN468/lab5/SRC/Arbiter.cpp" -o "D_PRJDIR_/Arbiter.o" -H

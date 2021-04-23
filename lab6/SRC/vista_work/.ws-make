@@ -1,3 +1,0 @@
-include /softwares/Linux/mentor/vista312/generic/make/preMakefile
-
-include /softwares/Linux/mentor/vista312/generic/make/postMakefile
