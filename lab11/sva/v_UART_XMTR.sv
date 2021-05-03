@@ -121,13 +121,13 @@ end
 // Assumptions
 // Make sure proper sequence of input load/ready signals
 LOAD_XMT_SEQUENCE_A : assume property(@(posedge Clock)
-                        Load_XMT_datareg |-> state==idle;
+                        Load_XMT_datareg |-> state==idle
 );
 BYTE_READY_SEQUENCE_A : assume property(@(posedge Clock)
-                        Byte_ready |-> state==idle;
+                        Byte_ready |-> state==idle
 );
 T_BYTE_SEQUENCE_A : assume property(@(posedge Clock)
-                        T_byte |-> state==waiting;
+                        T_byte |-> state==waiting
 );
 
 
@@ -138,11 +138,11 @@ LOAD_DATAREG_CHECK_1 : assert property(@(Load_XMT_datareg or state or posedge Cl
                             state!=idle  |->  ~Load_XMT_DR);
  // Check if is asserted according to bitcount correctly (low when bitcount == 9)
 BCMAX_CHECK_0 : assert property(@(posedge Clock)
-                            bit_count <= 4'd8 |-> BC_lt_BCmax;
+                            bit_count <= 4'd8 |-> BC_lt_BCmax
 );
 // BCmax is cleared when clear is asserted
 BCMAX_CHECK_1 : assert property(@(posedge Clock)
-                  clear |-> ~BC_lt_BCmax;
+                  clear |-> ~BC_lt_BCmax
 );
 //XMT_SHFTREG_CHECK : // TODO - check that Byte_Ready forces assertion of Load_XMT_sfhtreg (at same time)
 //START_CEHCK_0 : // TODO -  start should go same time T_byte goes high
