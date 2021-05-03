@@ -57,27 +57,7 @@ property BC_lt_BCmax_check;
 	@(posedge Clock) disable iff (~rst_b) (bit_count <= 4'd8) |-> BC_lt_BCmax;
 endproperty
 BC_lt_BCmax_check_A : assert property(BC_lt_BCmax_check);
-// First shift implies 0 on Serial_out
-property first_shift_check;
-	@(posedge Clock) disable iff (~rst_b) $rose(shift) |-> Serial_out == 0;
-endproperty
-first_shift_check_A : assert property(first_shift_check);
-// Databus -> Serial Check
-// Aux code to latch Databus for checking
-reg [7:0] data_bus_save;
-always @(posedge Clock)
-	begin
-	if (Load_XMT_DR)
-		data_bus_save <= Data_Bus;
-	begin
-	end
-end
-property data_bus_to_serial_check;
-	@(posedge Clock) disable iff (~rst_b)
-		START_SEQUENCE |-> (~Serial_out ##1 (shift && Serial_out == data_bus_save[0]) ##1 (shift && Serial_out == data_bus_save[1]) ##1 (shift && Serial_out == data_bus_save[2]) ##1 (shift && Serial_out == data_bus_save[3])
-		                                ##1 (shift && Serial_out == data_bus_save[4]) ##1 (shift && Serial_out == data_bus_save[5]) ##1 (shift && Serial_out == data_bus_save[6]) ##1 (shift && Serial_out == data_bus_save[7]));
-endproperty
-data_bus_to_serial_check_A : assert property(data_bus_to_serial_check);
+
 
 //property ;
 //	@(posedge Clock) disable iff (~rst_b)

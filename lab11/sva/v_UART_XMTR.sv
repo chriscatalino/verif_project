@@ -129,12 +129,15 @@ BYTE_READY_SEQUENCE_A : assume property(@(posedge Clock)
 T_BYTE_SEQUENCE_A : assume property(@(posedge Clock)
                         T_byte |-> state==waiting
 );
+LOAD_BEFORE_READY : assume property(@(posedge Clock)
+						Load_XMT_datareg |-> ~Byte_ready
+);
 
 
 // Assertions
-LOAD_DATAREG_CHECK_0 : assert property(@(Load_XMT_datareg or state or posedge Clock) 
+LOAD_DATAREG_CHECK_0 : assert property(@(posedge Clock) 
                            (state==idle && Load_XMT_datareg) |->  Load_XMT_DR);
-LOAD_DATAREG_CHECK_1 : assert property(@(Load_XMT_datareg or state or posedge Clock) 
+LOAD_DATAREG_CHECK_1 : assert property(@(posedge Clock) 
                             state!=idle  |->  ~Load_XMT_DR);
  // Check if is asserted according to bitcount correctly (low when bitcount == 9)
 BCMAX_CHECK_0 : assert property(@(posedge Clock)
