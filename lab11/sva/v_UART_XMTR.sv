@@ -90,15 +90,19 @@ end
 reg [3:0] bit_count;
 always @ (posedge Clock or negedge rst_b)
 begin
-	if(rst_b == 1'b0)
-		bit_count <= 4'd0;
+	if(rst_b==1'b0)
+	begin
+		bit_count <= 0;
+	end
 	else
-      if (shift == 1'b1 && clear == 1'b0)
-		   bit_count <= bit_count + 1'd1;
-      else if (clear == 1'b1)
-         bit_count <= 4'd0;
-      else
-         bit_count <= bit_count;
+	begin
+		case({shift,clear})
+			2'b00: begin bit_count <= bit_count; end
+			2'b01: begin bit_count <= 0; end
+			2'b10: begin bit_count <= bit_count+1;end
+			2'b11: begin bit_count <= 0; end
+		endcase 		
+	end
 end
 
 // Aux Code to Latch Databus for later checking
@@ -150,6 +154,7 @@ BCMAX_CHECK_1 : assert property(@(posedge Clock)
 //CLEAR_CHECK_1 : // TODO - only goes high in sending state
 //SERIAL_OUT_CHECK : // TODO - check if matches what was latched from databus
 //RESET_CHECK : // TODO -  need to review documentation
+//TODO - first shift pulse Serial Out == 0
 
 
 // Coverage
