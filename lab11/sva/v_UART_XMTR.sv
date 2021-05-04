@@ -130,7 +130,7 @@ T_BYTE_SEQUENCE_A : assume property(@(posedge Clock)
                         T_byte |-> state==waiting
 );
 LOAD_BEFORE_READY : assume property(@(posedge Clock)
-						Load_XMT_datareg |-> ~Byte_ready
+                  $rose(state == idle) |=> (~Byte_ready throughout Load_XMT_datareg[->1]);
 );
 
 
@@ -141,23 +141,56 @@ LOAD_DATAREG_CHECK_1 : assert property(@(posedge Clock)
                             state!=idle  |->  ~Load_XMT_DR);
  // Check if is asserted according to bitcount correctly (low when bitcount == 9)
 BCMAX_CHECK_0 : assert property(@(posedge Clock)
-                            bit_count <= 4'd8 |-> BC_lt_BCmax
+               bit_count <= 4'd8 |-> BC_lt_BCmax
 );
 // BCmax is cleared when clear is asserted
 BCMAX_CHECK_1 : assert property(@(posedge Clock)
-                  clear |-> ~BC_lt_BCmax
+               clear |-> ~BC_lt_BCmax
 );
-//XMT_SHFTREG_CHECK : // TODO - check that Byte_Ready forces assertion of Load_XMT_sfhtreg (at same time)
-//START_CEHCK_0 : // TODO -  start should go same time T_byte goes high
-//START_CEHCK_1 : // TODO -  only goes high while in waiting state
-//START_CEHCK_2 : // TODO -  after start, stays low until after a shift and after a clear
-//SHIFT_CHECK_0 : // TODO - shift should follow until clear
-//SHIFT_CHECK_1 : // TODO - only goes high in sending state
-//CLEAR_CHECK_0 : // TODO - when BCMAX is asserted and after shift is asserted
-//CLEAR_CHECK_1 : // TODO - only goes high in sending state
-//SERIAL_OUT_CHECK : // TODO - check if matches what was latched from databus
+// Byte_Ready forces assertion of Load_XMT_sfhtreg (at same time)
+XMT_SHFTREG_CHECK : assert property(@(posedge Clock)
+               (state==idle && Byte_ready) |->  Load_XMT_shftreg
+);
+// Start should go same time T_byte goes high
+START_CHECK_0 : assert property(@(posedge Clock)
+               $rose(T_byte) |-> (start throughout shift[->1]) 
+);
+// Only goes high while in waiting state
+START_CEHCK_1 : assert property(@(posedge Clock)
+               $rose(start) |-> state==waiting
+);
+// After start, stays low until after a shift and after a clear
+START_CHECK_2 : assert property(@(posedge Clock)
+               $fell(start) |-> (~start throughout clear[->1])
+);
+// Shift should follow until clear
+SHIFT_CHECK_0 : assert property(@(posedge Clock)
+               $rose(shift) |-> (shift throughout clear[->1])
+);
+// Only goes high in sending state
+SHIFT_CHECK_1 : assert property(@(posedge Clock)
+               shift |-> state==sending
+);
+// Only goes high when BCMax High
+SHIFT_CHECK_2 :  assert property(@(posedge Clock)
+               shift |-> BC_lt_BCmax
+);
+// When BCMAX is asserted and after shift is asserted
+CLEAR_CHECK_0 : assert property(@(posedge Clock)
+               $fell(BC_lt_BCmax) |-> (clear && ~shift)
+);
+// Only goes high in sending state
+CLEAR_CHECK_1 : assert property(@(posedge Clock)
+               clear |-> state==sending
+);
+// Check if matches what was latched from databus
+SERIAL_OUT_CHECK : assert property(@(posedge Clock)
+               $rose(shift) |-> (~Serial_out) ##1 (Serial_out==databus_save[0]) ##1 (Serial_out==databus_save[1])
+                                              ##1 (Serial_out==databus_save[2]) ##1 (Serial_out==databus_save[3])
+                                              ##1 (Serial_out==databus_save[4]) ##1 (Serial_out==databus_save[5])
+                                              ##1 (Serial_out==databus_save[6]) ##1 (Serial_out==databus_save[7])                                             
+);
 //RESET_CHECK : // TODO -  need to review documentation
-//TODO - first shift pulse Serial Out == 0
 
 
 // Coverage
