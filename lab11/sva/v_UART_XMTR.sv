@@ -4,44 +4,15 @@ module UART_XMTR_Props(
 	input       T_byte,
 	input       Byte_ready,
 	input       Clock,
-	input       rst_b
-);
-
-wire BC_lt_BCmax;
-wire Load_XMT_DR;
-wire Load_XMT_shftreg;
-wire start;
-wire shift;
-wire clear;
-wire Serial_out;
-
-// Instantiatew Sub-Modules to Generate Intermediate Signals for Test
-Control_Unit CONTROL_UNIT_INST
-(
-	.Load_XMT_DR(Load_XMT_DR),
-	.Load_XMT_shftreg(Load_XMT_shftreg),
-	.start(start),
-	.shift(shift),
-	.clear(clear),
-	.Load_XMT_datareg(Load_XMT_datareg),
-	.Byte_ready(Byte_ready),
-	.T_byte(T_byte),
-	.BC_lt_BCmax(BC_lt_BCmax),
-	.Clock(Clock),
-	.rst_b(rst_b)
-);
-Datapath_Unit DATAPATH_UNIT_INST
-(
-	.Serial_out(Serial_out),
-	.BC_lt_BCmax(BC_lt_BCmax),
-	.Data_Bus(Data_Bus),
-	.Load_XMT_DR(Load_XMT_DR),
-	.Load_XMT_shftreg(Load_XMT_shftreg),
-	.start(start),
-	.shift(shift),
-	.clear(clear),
-	.Clock(Clock),
-	.rst_b(rst_b)
+	input       rst_b,
+	input       BC_lt_BCmax,
+	input       Load_XMT_DR,
+	input       Load_XMT_shftreg,
+	input       start,
+	input       shift,
+	input       clear,
+	input       Serial_out
+   
 );
 
 
@@ -190,8 +161,10 @@ SERIAL_OUT_CHECK : assert property(@(posedge Clock)
                                               ##1 (Serial_out==databus_save[4]) ##1 (Serial_out==databus_save[5])
                                               ##1 (Serial_out==databus_save[6]) ##1 (Serial_out==databus_save[7])                                             
 );
-//RESET_CHECK : // TODO -  need to review documentation
-
+// Enter Reset Mode Correctly
+RESET_CHECK_0 : assert property(@(posedge Clock)
+               $fell(rst_b) |-> (state == idle && bit_count == 0)
+);
 
 // Coverage
 LOAD_XMT_SEQUENCE_C : cover property(@(posedge Clock)
@@ -212,4 +185,22 @@ UNFORTUNATE_RESET_C : cover property(@(posedge Clock)
 
 endmodule
 
+module Bind_Wrapper;
 
+bind UART_XMTR UART_XMTR_Props UART_XMTR_Props_Inst(
+.Data_Bus(Data_Bus),
+.Load_XMT_datareg(Load_XMT_datareg),
+.T_byte(T_byte),
+.Byte_ready(Byte_ready),
+.Clock(Clock),
+.rst_b(rst_b),
+.BC_lt_BCmax(BC_lt_BCmax),
+.Load_XMT_DR(Load_XMT_DR),
+.Load_XMT_shftreg(Load_XMT_shftreg),
+.start(start),
+.shift(shift),
+.clear(clear),
+.Serial_out(Serial_out)
+
+);
+endmodule
