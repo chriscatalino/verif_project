@@ -57,7 +57,7 @@ begin
    case (state)
       idle:
          begin
-            if(Byte_ready == 1'b1)
+            if(Byte_ready == 1'b1 && ~Load_XMT_datareg)
                next_state <= waiting;
             else
                next_state <= idle;
@@ -130,13 +130,13 @@ T_BYTE_SEQUENCE_A : assume property(@(posedge Clock)
                         T_byte |-> state==waiting
 );
 LOAD_BEFORE_READY : assume property(@(posedge Clock)
-                  $rose(state == idle) |=> (~Byte_ready throughout Load_XMT_datareg[->1]);
+                  $rose(state == idle) |-> (~Byte_ready throughout Load_XMT_datareg[->1])
 );
 
 
 // Assertions
 LOAD_DATAREG_CHECK_0 : assert property(@(posedge Clock) 
-                           (state==idle && Load_XMT_datareg) |->  Load_XMT_DR);
+                           (state==idle && Load_XMT_datareg && ~Byte_ready) |->  Load_XMT_DR);
 LOAD_DATAREG_CHECK_1 : assert property(@(posedge Clock) 
                             state!=idle  |->  ~Load_XMT_DR);
  // Check if is asserted according to bitcount correctly (low when bitcount == 9)
@@ -153,7 +153,7 @@ XMT_SHFTREG_CHECK : assert property(@(posedge Clock)
 );
 // Start should go same time T_byte goes high
 START_CHECK_0 : assert property(@(posedge Clock)
-               $rose(T_byte) |-> (start throughout shift[->1]) 
+               $rose(T_byte) |-> (start ##1 shift) 
 );
 // Only goes high while in waiting state
 START_CEHCK_1 : assert property(@(posedge Clock)
@@ -194,7 +194,21 @@ SERIAL_OUT_CHECK : assert property(@(posedge Clock)
 
 
 // Coverage
-
+LOAD_XMT_SEQUENCE_C : cover property(@(posedge Clock)
+                        Load_XMT_datareg |-> state==idle
+);
+BYTE_READY_SEQUENCE_C : cover property(@(posedge Clock)
+                        Byte_ready |-> state==idle
+);
+T_BYTE_SEQUENCE_C : cover property(@(posedge Clock)
+                        T_byte |-> state==waiting
+);
+LOAD_BEFORE_READY_C : cover property(@(posedge Clock)
+                  $rose(state == idle) |-> (~Byte_ready throughout Load_XMT_datareg[->1])
+);
+UNFORTUNATE_RESET_C : cover property(@(posedge Clock)
+				shift[*3] |-> ~rst_b
+);
 
 endmodule
 
